@@ -16,11 +16,13 @@ Avant d'entreprendre quoique ce soit, assurez-vous d'avoir installé l'éditeur 
 * [Mac OS X](https://www.arduino.cc/en/Guide/MacOSX);
 * [Linux](https://www.arduino.cc/en/Guide/Linux).
 
+Pour la suite, vous aurez besoin d'un câble USB de type A/B ([par exemple](https://store.arduino.cc/usa/usb-2-0-cable-type-a-b)). Ensuite, ... TODO [guide](https://www.arduino.cc/en/Guide/ArduinoNano) [problèmes](https://www.arduino.cc/en/Guide/Troubleshooting#upload)
+
 Vous pouvez maintenant choisir le projet de la semaine que vous souhaitez entreprendre. Les projets sont toujours réalisés selon la même séquence.
 
-1. Commencer par transférer le code de l'activité sur votre Arduino Nano.
-1.1 Connectez l'Arduino Nano à votre ordinateur avec un câble USB de type A/B ([par exemple](https://store.arduino.cc/usa/usb-2-0-cable-type-a-b)).
-1.2 TODO.
+1. Commencer par transférer le code de l'activité sur votre Arduino Nano.  
+⋅⋅1.1 Connectez l'Arduino Nano à votre ordinateur avec le câble USB de type A/B.  
+⋅⋅1.2 TODO.
 2. Réalisez le circuit en suivant les étapes présentées dans les images.
 3. Alimentez le circuit.
 4. Amusez-vous !
