@@ -21,8 +21,8 @@ Pour la suite, vous aurez besoin d'un câble USB de type A/B ([par exemple](http
 Vous pouvez maintenant choisir le projet de la semaine que vous souhaitez entreprendre. Les projets sont toujours réalisés selon la même séquence.
 
 1. Commencer par transférer le code de l'activité sur votre Arduino Nano.  
-⋅⋅1.1 Connectez l'Arduino Nano à votre ordinateur avec le câble USB de type A/B.  
-⋅⋅1.2 TODO.
+  1.1. Connectez l'Arduino Nano à votre ordinateur avec le câble USB de type A/B.  
+  1.2. TODO.
 2. Réalisez le circuit en suivant les étapes présentées dans les images.
 3. Alimentez le circuit.
 4. Amusez-vous !
