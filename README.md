@@ -22,15 +22,19 @@ Dans l'IDE, cliquez sur Outils -> Type de carte -> Arduino Nano. Aussi, sélecti
 
 Si vous éprouvez des difficultées, vous pouvez consulter ce [lien](https://www.arduino.cc/en/Guide/Troubleshooting#upload) ou encore consulter le [guide de démarrage officiel d'Arduino](https://www.arduino.cc/en/Guide/ArduinoNano). Il est à noter que pour les utilisateurs de Linux, il peut s'avérer nécessaire de modifier certaines permissions liées à l'utilisation du port USB. Si c'est le cas, voici [ce qu'il faut faire](https://www.youtube.com/watch?v=MKS1vVDXiU0).
 
+## Par réaliser un des projet
+
 Si vous n'avez pas rencontrer de problème jusqu'à présent, félicitations ! Si vous souhaitez reproduire les projets de la semaine, il vous suffit de cliquer sur le bouton vert "Clone or Download" (dans le haut de la page) et sélectionnez "Download ZIP".
 
 Après avoir extrait le fichier ZIP, vous pourez consulter le code et les schémas des différentes activités. Les projets peuvent toujours être réalisés selon la séquence suivante :
 
 1. Commencer par transférer le code de l'activité sur votre Arduino Nano.  
-  1.1. Connectez l'Arduino Nano à votre ordinateur avec le câble Micro-USB. 
-  1.2. Trouvez le script (fichier .ino) de l'activité et double-cliquez dessus (l'IDE devrait s'ouvrir).
-  1.3. Appuyer sur le bouton de téléversement (la flêche) dans l'IDE.
-  1.4. Débrancher votre Arduino.
-2. Réalisez le circuit, en suivant les étapes présentées dans les images.
-3. Alimentez le circuit (avec une batterie 9V ou en branchant votre Arduino à votre ordinateur).
+  1.1. Connectez l'Arduino Nano à votre ordinateur avec le câble Micro-USB.  
+  1.2. Trouvez le script (fichier .ino) de l'activité et double-cliquez dessus (l'IDE devrait s'ouvrir).  
+  1.3. Appuyer sur le bouton de téléversement (la flêche) dans l'IDE.  
+  1.4. Débrancher votre Arduino.  
+2. Réalisez le circuit, en suivant les étapes présentées dans les images.  
+3. Alimentez le circuit (avec une batterie 9V ou en branchant votre Arduino à votre ordinateur).  
 4. Amusez-vous !
+
+> Pour le projet radio, il vous sera nécessaire d'installer trois librairies. Téléchargez d'abord le fichier .ZIP de la [Si4703_Breakout](https://cdn.sparkfun.com/assets/learn_tutorials/2/7/4/Si4703_Breakout.zip), ensuite celui de la [LCD5110_Graph](http://www.rinkydinkelectronics.com/library.php?id=47) et finalement celui de la [Keypad](https://www.arduinolibraries.info/libraries/keypad). Pour terminer, dans l'IDE, cliquez sur Croquis -> Inclure une bibliothèque -> Ajouter bibliothèque .ZIP... et ajouter les trois fichiers .ZIP téléchargés.
