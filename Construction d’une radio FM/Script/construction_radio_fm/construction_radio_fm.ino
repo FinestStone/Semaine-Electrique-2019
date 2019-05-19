@@ -19,32 +19,13 @@
 int resetPin = 2;
 int SDIO = A4;
 int SCLK = A5;
-
 Si4703_Breakout radio(resetPin, SDIO, SCLK);
-float channel;
-int volume;
 
 // Variables pour l'écran LCD 5110
 LCD5110 lcd(A0,A1,A2,12,11);
-
 extern unsigned char BigNumbers[];
-extern unsigned char TinyFont[];
 
-extern uint8_t splash[];
-extern uint8_t signal5[];
-extern uint8_t signal4[];
-extern uint8_t signal3[];
-extern uint8_t signal2[];
-extern uint8_t signal1[];
-
-int analogPin = 0;
-int val = 0; 
-int frequencyInt = 0;
-float frequency = 0;
-float previousFrequency = 0;
-int signalStrength = 0;
-
-// Définitions des constantes pour le clavier
+// Variables pour le clavier
 const byte ROWS = 4;
 const byte COLS = 4;
 char keys[ROWS][COLS] = {
@@ -53,106 +34,81 @@ char keys[ROWS][COLS] = {
   {'7','8','9','C'},
   {'*','0','#','D'}
 };
-
-byte rowPins[ROWS] = {3, 4, 5, 6}; // broches de rangées du clavier
-byte colPins[COLS] = {7, 8, 9, 10}; // broches de colonnes du clavier
-
+byte rowPins[ROWS] = {3, 4, 5, 6}; // Broches de rangées du clavier
+byte colPins[COLS] = {7, 8, 9, 10}; // Broches de colonnes du clavier
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
+// Variables pour la fréquence et le poste écouté, ainsi que le volume choisi
+float frequency = 0;
+float channel = 0;
+uint8_t volume = 0;
+
+// Code pour l'initialisation de librairies
 void setup() {
-  initScreen();
-  showSplashScreen();
-  
-  Serial.begin(9600);
-  
-  Serial.println("\n\nSi4703_Breakout Commands");
-  Serial.println("========================");
-  Serial.println("+ -     Volume (max 15)");
-  Serial.println("u d     Seek up / down");
-  
+  // Initialisation de l'écran LCD
+  lcd.InitLCD();
+  lcd.setFont(BigNumbers);
+  lcd.clrScr();
+
+  // Initialisation du récepteur FM
   radio.powerOn();
   radio.setVolume(0);
 }
 
 void loop() {
-
+  // Enregistrer la touche appuyée sur le clavier
   char key = keypad.getKey();
 
-  // Si une touche du clavier est pressé
+  // Si une touche du clavier a été appuyée
   if (key){
-    Serial.println(key);
-
     switch (key) {
-    
-    case 'A': // monter la fréquence
-      channel = radio.seekUp();
-      displayInfo();
-      break;
-
-    case 'B': // descendre la fréquence
-      channel = radio.seekDown();
-      displayInfo();
-      break;
-
-    case 'C': // monter le volume
-      volume ++;
-      if (volume == 16) volume = 15;
-      radio.setVolume(volume);
-      displayInfo();
-      break;
-    
-    case 'D': // descendre le volume
-      volume --;
-      if (volume < 0) volume = 0;
-      radio.setVolume(volume);
-      displayInfo();
-      break;
+      // Monter la fréquence
+      case 'A':
+        channel = radio.seekUp();
+        break;
+      
+      // Descendre la fréquence
+      case 'B':
+        channel = radio.seekDown();
+        break;
+      
+      // Monter le volume
+      case 'C':
+        volume ++;
+        if (volume == 16) volume = 15;
+        radio.setVolume(volume);
+        break;
+      
+      // Descendre le volume
+      case 'D':
+        volume --;
+        if (volume < 0) volume = 0;
+        radio.setVolume(volume);
+        break;
     }
   }
-  
+
   frequency = channel/10;
-  
+
+  // Rafraîchir l'écran
   lcd.clrScr();
-  printFrequency(frequency);
-  delay(50); 
-  val = 0;
-}
 
-void displayInfo()
-{
-   Serial.print("Channel:"); Serial.print(channel); 
-   Serial.print(" Volume:"); Serial.println(volume); 
-}
-
-void initScreen()
-{
-  lcd.InitLCD();
-  lcd.setFont(BigNumbers);
-  lcd.clrScr();
-}
-
-void showSplashScreen()
-{
-  lcd.drawBitmap(0, 0, splash, 84, 48);
-  lcd.update();  
-  delay(3000);
-  lcd.clrScr();
-  lcd.update();
-}
-
-void printFrequency(float frequency)
-{
-  String frequencyString = String(frequency,1);
-  if(frequencyString.length() == 4)
+  // Si la fréquence est inférieure à 99.9 MHz (3 caractères à afficher)
+  if (String(frequency,1).length() == 4)
   {
     lcd.setFont(BigNumbers);
-    lcd.print(frequencyString,14,12);
+    lcd.print(String(frequency,1),14,12);
     lcd.update();
   }
+  
+  // Sinon, la fréquence est supérieure ou égale à 100.0 MHz (4 caractères à afficher)
   else
   {
     lcd.setFont(BigNumbers);
-    lcd.print(frequencyString,0,12);
+    lcd.print(String(frequency,1),0,12);
     lcd.update();
   }
+
+  // Délai de 50 ms
+  delay(50);
 }
