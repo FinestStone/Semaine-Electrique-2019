@@ -1,9 +1,8 @@
-[![N|Solid](
-http://folietechnique.com/sites/folietechnique2.amigow.polymtl.ca/files/logo-folietechnique.png)](http://folietechnique.com/)
+[![N|Solid](http://folietechnique.com/sites/folietechnique2.amigow.polymtl.ca/files/logo-folietechnique.png)](http://folietechnique.com/)
 
 # Semaine Électrique 2019
 
-Bienvenue sur le répertoire GitHub de la semaine électrique 2019 pour le camp scientifique [Folie Technique](http://folietechnique.com/)!
+Bienvenue sur le répertoire GitHub de la semaine électrique 2019 pour le camp scientifique [Folie Technique](http://folietechnique.com/) !
 
 ## Par où commencer ?
 
@@ -18,13 +17,13 @@ Avant d'entreprendre quoique ce soit, assurez-vous d'avoir installé l'éditeur 
 
 Pour la suite, vous aurez besoin d'un câble de type Micro-USB ([par exemple](https://www.staples.ca/fr/Câble-1M-Micro-USB-couleurs-variées/product_1883474_1-CA_2_20001)).
 
-Dans l'IDE, cliquez sur Outils -> Type de carte -> Arduino Nano. Aussi, sélectionnez Outils -> Processor -> ATmega168. Finalement, choisissez Outils -> Port -> (Choisir un des ports proposés). Pour valider que tout est fonctionnel, branchez votre Arduino à votre ordinateur et sélectionnez Fichier -> Exemples -> 01.Basics -> Blink. Téléverser le code de la fenêtre qui vient de s'ouvrir, soit en appuyant sur le bouton avec la flêche (Téléverser). Si tout se déroule correctement, on devrait pouvoir lire après quelques seconde, dans le bas de la fenêtre, "Téléversement terminé" et la DEL rouge de votre Arduino devrait s'allumer et s'éteindre à chaque seconde.
+Dans l'IDE, cliquez sur Outils -> Type de carte -> Arduino Nano. Aussi, sélectionnez Outils -> Processor -> ATmega168. Finalement, choisissez Outils -> Port -> (Choisir un des ports proposés). Pour valider que tout est fonctionnel, branchez votre Arduino à votre ordinateur et sélectionnez Fichier -> Exemples -> 01.Basics -> Blink. Téléverser le code de la fenêtre qui vient de s'ouvrir, soit en appuyant sur le bouton avec la flèche (Téléverser). Si tout se déroule correctement, on devrait pouvoir lire après quelques secondes, dans le bas de la fenêtre, "Téléversement terminé" et la DEL rouge de votre Arduino devrait s'allumer et s'éteindre chaque seconde.
 
-Si vous éprouvez des difficultées, vous pouvez consulter ce [lien](https://www.arduino.cc/en/Guide/Troubleshooting#upload) ou encore consulter le [guide de démarrage officiel d'Arduino](https://www.arduino.cc/en/Guide/ArduinoNano). Il est à noter que pour les utilisateurs de Linux, il peut s'avérer nécessaire de modifier certaines permissions liées à l'utilisation du port USB. Si c'est le cas, voici [ce qu'il faut faire](https://www.youtube.com/watch?v=MKS1vVDXiU0).
+Si vous éprouvez des difficultés, vous pouvez consulter ce [lien](https://www.arduino.cc/en/Guide/Troubleshooting#upload) ou encore consulter le [guide de démarrage officiel d'Arduino](https://www.arduino.cc/en/Guide/ArduinoNano). Il est à noter que pour les utilisateurs de Linux, il peut s'avérer nécessaire de modifier certaines permissions liées à l'utilisation du port USB. Si c'est le cas, voici [ce qu'il faut faire](https://www.youtube.com/watch?v=MKS1vVDXiU0).
 
-## Par réaliser un des projet
+## Pour réaliser un des projets
 
-Si vous n'avez pas rencontrer de problème jusqu'à présent, félicitations ! Si vous souhaitez reproduire les projets de la semaine, il vous suffit de cliquer sur le bouton vert "Clone or Download" (dans le haut de la page) et sélectionnez "Download ZIP".
+Si vous n'avez pas rencontré de problème jusqu'à présent, félicitations ! Si vous souhaitez reproduire les projets de la semaine, il vous suffit de cliquer sur le bouton vert "Clone or Download" (dans le haut de la page) et sélectionnez "Download ZIP".
 
 Après avoir extrait le fichier ZIP, vous pourez consulter le code et les schémas des différentes activités. Les projets peuvent toujours être réalisés selon la séquence suivante :
 
