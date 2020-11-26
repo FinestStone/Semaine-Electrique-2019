@@ -1,4 +1,8 @@
-[![N|Solid](http://folietechnique.com/sites/folietechnique2.amigow.polymtl.ca/files/logo-folietechnique.png)](http://folietechnique.com/)
+<div>
+  <a href="http://folietechnique.com/">
+  <img src="http://folietechnique.com/sites/folietechnique2.amigow.polymtl.ca/files/logo-folietechnique.png">
+  </a>
+</div>
 
 # Semaine Électrique 2019
 
